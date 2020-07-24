@@ -1,0 +1,8 @@
+section.CardContainer {
+  display: flex;
+  margin: 0 auto;
+}
+
+section.CardContainer > div + div {
+  margin-left: 15vh;
+}
