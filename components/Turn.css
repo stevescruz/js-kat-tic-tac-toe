@@ -1,0 +1,10 @@
+div.PlayerCard.turn::after{
+  content: "Your turn";
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+
+  position: absolute;
+  bottom: -12%;
+}

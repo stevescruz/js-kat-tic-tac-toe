@@ -1,0 +1,43 @@
+div.PlayerCard.p1Score::after{
+  content: "1";
+  
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+
+  position: absolute;
+  bottom: -12%;
+}
+
+div.PlayerCard.p2Score::after{
+  content: "0";
+  
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+
+  position: absolute;
+  bottom: -12%;
+}
+
+div.PlayerCard.p1Result::after{
+  content: "Winner";
+  
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+
+  position: absolute;
+  bottom: -12%;
+}
+
+div.PlayerCard.p1Result::after{
+  content: "loser";
+  
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+
+  position: absolute;
+  bottom: -12%;
+}
