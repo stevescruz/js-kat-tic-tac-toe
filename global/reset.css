@@ -8,3 +8,21 @@ body {
   color: var(--primary-font-color);
   font-family: 'Roboto Slab', serif;
 }
+
+html, body {
+  padding: 0;
+  margin: 0 ;
+}
+
+h1, p {
+  margin:0 0 1em;
+}
+
+/* body > *:first-child {
+  margin-top: 0;
+} */
+
+.none {
+  /* visibility: hidden; */
+  display: none;
+}

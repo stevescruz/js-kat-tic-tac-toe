@@ -7,7 +7,7 @@ div.PlayerCard {
 
   background-color: var(--primary-color);
   padding: 20px;
-  border: 1px solid var(--terciary-color);
+  border: 1.5px solid var(--terciary-color);
   border-radius: 8px;
 
   position: relative;
@@ -36,4 +36,5 @@ div.PlayerCard img:last-of-type {
 div.PlayerCard > img.x {
   width: 55px;
   height: 55px;
+  margin-top: 10px;
 }

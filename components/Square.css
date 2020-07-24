@@ -1,0 +1,12 @@
+button.Square {
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-color);
+  border: 1px solid var(--terciary-color);
+  border-radius: 16px;
+}

@@ -1,8 +1,8 @@
 section.CardContainer {
   display: flex;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
 }
 
 section.CardContainer > div + div {
-  margin-left: 15vh;
+  margin-left: 5vw;
 }

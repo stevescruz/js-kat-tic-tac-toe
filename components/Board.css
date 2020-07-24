@@ -1,0 +1,9 @@
+section.Board {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.Board > button.Square {
+  margin-top: 5px;
+  margin-left: 5px;
+}

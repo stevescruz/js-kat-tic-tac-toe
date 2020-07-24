@@ -1,0 +1,9 @@
+div.MainContainer {
+  width: 470px;
+  height: 470px;
+
+  background-color: var(--secondary-color);
+
+  border-radius: 16px;
+  margin: 150px auto 0 auto;
+}

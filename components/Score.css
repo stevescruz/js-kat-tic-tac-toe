@@ -1,4 +1,4 @@
-div.PlayerCard.p1Score::after{
+.p1Score::after{
   content: "1";
   
   font-size: 18px;
@@ -8,7 +8,7 @@ div.PlayerCard.p1Score::after{
   bottom: -12%;
 }
 
-div.PlayerCard.p2Score::after{
+.p2Score::after{
   content: "0";
   
   font-size: 18px;
@@ -18,7 +18,7 @@ div.PlayerCard.p2Score::after{
   bottom: -12%;
 }
 
-div.PlayerCard.p1Result::after{
+.p1Result::after{
   content: "Winner";
   
   font-size: 18px;
@@ -28,8 +28,8 @@ div.PlayerCard.p1Result::after{
   bottom: -12%;
 }
 
-div.PlayerCard.p1Result::after{
-  content: "loser";
+.p2Result::after{
+  content: "Loser";
   
   font-size: 18px;
   font-weight: bold;
