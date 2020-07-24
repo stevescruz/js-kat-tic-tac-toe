@@ -5,9 +5,9 @@ div.PlayerCard {
   align-items: center;
   justify-content: center;
 
-  background-color: #0c2461;
+  background-color: var(--primary-color);
   padding: 20px;
-  border: 1px solid #6a89cc;
+  border: 1px solid var(--terciary-color);
   border-radius: 8px;
 
   position: relative;
@@ -20,7 +20,6 @@ div.PlayerCard img:first-of-type {
 }
 
 div.PlayerCard strong {
-  color: #fff;
   font-size: 18px;
 
   margin-top: 10px;

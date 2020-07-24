@@ -1,7 +1,10 @@
 body {
-  background-color: #3c6382;
+  background-color: var(--background-color);
 }
 
 * {
   box-sizing: border-box;
+
+  color: var(--primary-font-color);
+  font-family: 'Roboto Slab', serif;
 }
