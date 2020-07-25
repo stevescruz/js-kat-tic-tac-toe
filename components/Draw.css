@@ -1,0 +1,62 @@
+section.Draw {
+  width: inherit;
+  height: inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: repeating-linear-gradient(
+  -45deg,
+  var(--secondary-color),
+  var(--terciary-color) 10px,
+  var(--secondary-color) 10px,
+  var(--primary-color) 20px
+);
+
+  position: relative;
+}
+
+section.Draw > div {
+  width: 300px;
+  height: 300px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+section.Draw > div > img {
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+  margin: 5px;
+}
+
+section.Draw::before{
+  content: "DRAW!";
+  
+  font-size: 44px;
+  font-weight: bold;
+
+  position: absolute;
+  bottom: 16%;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+section.Draw::after{
+  content: "Try again!";
+  
+  font-size: 28px;
+  font-weight: bold;
+
+  position: absolute;
+  bottom: 8%;
+  right: 50%;
+  transform: translateX(50%);
+}

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kat Tic-Tac-Toe</title>
 
+  <script src="/src/App.js" defer></script>
+
   <link href="/global/reset.css" rel="stylesheet"/>
   <link href="/global/colors.css" rel="stylesheet"/>
 
@@ -19,6 +21,7 @@
 
   <link href="/components/Play.css" rel="stylesheet"/>
   <link href="/components/Result.css" rel="stylesheet"/>
+  <link href="/components/Draw.css" rel="stylesheet"/>
 
   <link href="/components/PlayButton.css" rel="stylesheet"/>
   <link href="/components/Turn.css" rel="stylesheet"/>
@@ -32,14 +35,16 @@
   <div class="Wrapper">
     <section class ="CardContainer">
       <div class="PlayerCard">
-        <img src="/assets/Avatar_Cat-512.png"/>
-        <strong>Steve Cruz</strong>
+        <div>
+        </div>
+        <strong></strong>
         <img src="/assets/circle.svg" />
       </div>
 
       <div class="PlayerCard">
-        <img src="/assets/Avatar_Rabbit-512.png"/>
-        <strong>Steve Cruz</strong>
+        <div>
+        </div>
+        <strong></strong>
         <img class="x" src="./assets/x.svg" />
       </div>
     </section>
@@ -58,22 +63,18 @@
       </section>
 
       <section class="Board none">
-        <button class="none"></button>
-        <button class="none"></button>
-        <button class="none">
-          <img class="x none" src="/assets/x.svg" />
-        </button>
-        <button class="none"></button>
-        <button class="none">
-          <img class="none" src="/assets/circle.svg" />
-        </button>
-        <button class="none"></button>
-        <button class="none"></button>
-        <button class="none"></button>
-        <button class="none"></button>
+        <button class="none" />
+        <button class="none" />
+        <button class="none" />
+        <button class="none" />
+        <button class="none" />
+        <button class="none" />
+        <button class="none" />
+        <button class="none" />
+        <button class="none" />
       </section>
 
-      <section class ="none"><!-- Add .Result .PlayButton  -->
+      <section class ="none">
         <div class ="none">
           <img class ="none" src="/assets/victory.gif" />
         </div>

@@ -18,7 +18,7 @@
   bottom: -12%;
 }
 
-.p1Result::after{
+.resultP1::after{
   content: "Winner";
   
   font-size: 18px;
@@ -28,8 +28,8 @@
   bottom: -12%;
 }
 
-.p2Result::after{
-  content: "Loser";
+.resultP2::after{
+  content: "Winner";
   
   font-size: 18px;
   font-weight: bold;

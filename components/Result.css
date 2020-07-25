@@ -39,8 +39,20 @@ section.Result > div > img {
   border-radius: 16px;
 }
 
-section.Result::before{
+section.victoryP1::before{
   content: "Player 1";
+  
+  font-size: 44px;
+  font-weight: bold;
+
+  position: absolute;
+  bottom: 25%;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+section.victoryP2::before{
+  content: "Player 2";
   
   font-size: 44px;
   font-weight: bold;
