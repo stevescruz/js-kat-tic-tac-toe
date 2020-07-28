@@ -50,12 +50,15 @@ class Player {
   }
 }
 
+
+
 class Match {
   matchId;
   player1Id;
   player2Id;
   board;
   turn;
+  vsAI;
 
   constructor(player1Id, player2Id) {
     this.matchId = Math.floor(Math.random() * (10000 - 15 + 1)) + 15;
@@ -63,6 +66,7 @@ class Match {
     this.player2Id = player2Id;
     this.board = [[0, 0, 0], [0, 0, 0], [0, 0 ,0]];
     this.turn = 0;
+    this.vsAI = true;
   }
 
   updateBoard(position, playerNum) {
@@ -201,6 +205,32 @@ function initializePlayers() {
   }
 }
 
+function checkAINextMove() {
+  const possibleMoves = {}
+  let counter = 1;
+  for(let i = 0; i < 3; i++){
+    for(let j = 0; j < 3; j++){
+      if (match.board[i][j] === 0) {
+        possibleMoves[counter] = counter;
+      }
+    counter ++;
+    }
+  }
+  return possibleMoves;
+}
+
+function pickAIMove() {
+  const possibleMoves = checkAINextMove();
+
+  console.log("possible moves:", possibleMoves);
+  
+  let keys = Object.keys(possibleMoves);
+
+  let randomProperty = possibleMoves[keys[ keys.length * Math.random() << 0]];
+
+  return randomProperty;
+}
+
 function initializePlay() {
   const playButton = document.querySelector('section.Play > button');
   playButton.addEventListener('click', removePlay);
@@ -248,6 +278,36 @@ function nextTurn() {
   else if(match.turn % 2 === 0) {
     playerCard1.setAttribute('class', 'PlayerCard');
     playerCard2.setAttribute('class', 'PlayerCard turn');
+
+    if(match.vsAI) {
+      let move = pickAIMove();
+
+      const square = document.querySelector(`button#\\3${move}`)
+      const x = document.createElement('img');
+
+      x.setAttribute('src', 'assets/x.svg');
+      square.appendChild(x);
+      square.disabled = true
+
+
+      match.updateBoard(move.toString(), 2);
+
+      console.log(move);
+      console.log(match.board);
+
+      const result = match.checkResult();
+  
+      console.log('result:', result);
+
+      if(result !== -1) {
+        removeGame();
+        startResult(result);
+        return;
+      }
+
+      nextTurn();
+    }
+    
   } 
   else {
     playerCard2.setAttribute('class', 'PlayerCard');
@@ -275,7 +335,7 @@ function handleSquareClick(event) {
 
   const squarePosition = event.target.id;
   const playerNum = match.turn % 2 === 0 ? 2 : 1;
-  match.updateBoard(squarePosition, playerNum)
+  match.updateBoard(squarePosition, playerNum);
 
   const result = match.checkResult();
   
