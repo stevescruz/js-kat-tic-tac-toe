@@ -15,10 +15,12 @@
   <a href="#memo-license">License</a>
 </p>
 
-![App Screenshot](https://res.cloudinary.com/dmct8cfu9/image/upload/c_scale,w_210/v1595674507/Kat_Tic-Tac-Toe01.png)
-![App Screenshot2](https://res.cloudinary.com/dmct8cfu9/image/upload/c_scale,w_210/v1595674507/Kat_Tic-Tac-Toe04.png)
-![App Screenshot3](https://res.cloudinary.com/dmct8cfu9/image/upload/c_scale,w_210/v1595674507/Kat_Tic-Tac-Toe02.png)
-![App Screenshot4](https://res.cloudinary.com/dmct8cfu9/image/upload/c_scale,w_210/v1595674507/Kat_Tic-Tac-Toe03.png)
+<div align="center" style="display: flex; flex-wrap: wrap;">
+   <img style="margin: 5px" alt="Initial menu" src="https://res.cloudinary.com/dmct8cfu9/image/upload/c_scale,w_210/v1595674507/Kat_Tic-Tac-Toe01.png" width="210" height="365"/>
+   <img style="margin: 5px" alt="tic-tac-toe metch" src="https://res.cloudinary.com/dmct8cfu9/image/upload/c_scale,w_210/v1595674507/Kat_Tic-Tac-Toe02.png" width="210" height="365"/>
+   <img style="margin: 5px" alt="Player 1 victory match result" src="https://res.cloudinary.com/dmct8cfu9/image/upload/c_scale,w_210/v1595674507/Kat_Tic-Tac-Toe04.png" width="210" height="365"/>
+   <img style="margin: 5px" alt="Draw match result" src="https://res.cloudinary.com/dmct8cfu9/image/upload/c_scale,w_210/v1595674507/Kat_Tic-Tac-Toe03.png" width="210" height="365"/>
+</div>
 
 ## Recurse Center
 
