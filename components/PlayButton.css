@@ -21,4 +21,13 @@ section.PlayButton > button > img {
   bottom: -5%;
   right: 50%;
   transform: translateX(50%);
+
+  transition: opacity 0.75s;
+}
+
+section.PlayButton > button > img:hover:not(:disabled) {
+  opacity: 0.8;
+  
+  outline: 1px solid var(--primary-font-color);
+  outline-offset: -2px;
 }
