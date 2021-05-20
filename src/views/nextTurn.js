@@ -1,4 +1,3 @@
-import { pickAIMove } from './pickAIMove.js';
 import { clearBoard } from './clearBoard.js';
 import { initiateResult } from './initiateResult.js';
 
@@ -18,7 +17,7 @@ function nextTurn(game) {
     playerCard2.setAttribute('class', 'PlayerCard turn');
 
     if (match.vsAI) {
-      const move = pickAIMove(match);
+      const move = match.pickAINextMove();
 
       const square = document.querySelector(`button#\\3${move}`)
       const x = document.createElement('img');
