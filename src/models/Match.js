@@ -8,6 +8,7 @@ class Match {
   player2Id;
   movesByPlayers;
   turn;
+  result;
   vsAI;
 
   constructor(player1Id, player2Id) {
@@ -21,8 +22,9 @@ class Match {
     this.player2Id = player2Id;
 
     this.movesByPlayers = [0B000000000, 0B000000000];
-
     this.turn = 0;
+    this.result = -1;
+
     this.vsAI = true;
   }
 
@@ -67,27 +69,31 @@ class Match {
     return possibleMoves;
   }
 
-  checkResult() {
+  setResult() {
     const markedSquares = this.movesByPlayers[0] | this.movesByPlayers[1];
 
     const player1FoundMatch = WINNING_MOVES_ENUM.some(combination => (combination & this.movesByPlayers[0]) === combination);
 
     if (player1FoundMatch) {
-      return 1;
+      this.result = 1;
+      return;
     }
 
     const player2FoundMatch = WINNING_MOVES_ENUM.some(combination => (combination & this.movesByPlayers[1]) === combination);
 
     if (player2FoundMatch) {
-      return 2;
+      this.result = 2;
+      return;
     }
 
     if (markedSquares === 0B111111111) {
-      return 0;
+      this.result = 0;
+      return;
     }
 
     console.log('Gamestate - marked squares:', markedSquares.toString(2));
-    return -1;
+    this.result = -1;
+    return;
   }
 
   pickAINextMove() {

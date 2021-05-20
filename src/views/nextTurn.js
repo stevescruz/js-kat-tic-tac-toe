@@ -31,15 +31,15 @@ function nextTurn(game) {
       console.log('move:', move);
       console.log(('board:', match.movesByPlayers[0] | match.movesByPlayers[1]).toString(2));
 
-      const result = match.checkResult();
+      match.setResult();
 
-      console.log('result:', result);
+      console.log('result:', match.result);
 
-      if (result !== -1) {
+      if (match.result !== -1) {
         console.log('player #2 ended the game');
         setTimeout(() => {
           clearBoard(game);
-          initiateResult(result, game);
+          initiateResult(match.result, game);
         }, 250);
         return;
       }
