@@ -1,5 +1,7 @@
 import { makeRemoveResultHandler } from './removeResultHandler.js';
 
+import { SOUND_EFFECTS_ENUM } from '../shared/enums/soundEffectsEnum.js';
+
 function initiateResult(result, game) {
   const resultScreen = document.querySelector('div.MainContainer > section:last-of-type');
   console.log(resultScreen);
@@ -23,6 +25,8 @@ function initiateResult(result, game) {
     drawImgContainer.appendChild(drawImg3);
     drawImgContainer.appendChild(drawImg4);
 
+    const drawAudio = new Audio(SOUND_EFFECTS_ENUM.FAILURE);
+    drawAudio.play();
   }
   else {
     if (result === 1) {
@@ -44,6 +48,8 @@ function initiateResult(result, game) {
     victoryImgContainer.setAttribute('class', '')
     victoryImg.setAttribute('class', '')
 
+    const victoryAudio = new Audio(SOUND_EFFECTS_ENUM.SUCCESS);
+    victoryAudio.play();
   }
 
   const playButton = document.querySelector('div.MainContainer > section:last-of-type > button');

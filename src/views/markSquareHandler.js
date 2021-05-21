@@ -2,6 +2,8 @@ import { nextTurn } from './nextTurn.js';
 import { clearBoard } from './clearBoard.js';
 import { initiateResult } from './initiateResult.js';
 
+import { SOUND_EFFECTS_ENUM } from '../shared/enums/soundEffectsEnum.js';
+
 let currentGame;
 
 const makeMarkSquareHandler = function (game) {
@@ -25,10 +27,12 @@ function markSquareHandler(event) {
     o.setAttribute('src', 'assets/images/circle.svg');
     event.target.appendChild(o);
   }
-
   event.target.disabled = true;
   // event.target.setAttribute('type', 'button')
   // event.target.style.pointerEvents = "none";
+
+  const selectAudio = new Audio(SOUND_EFFECTS_ENUM.SELECT);
+  selectAudio.play();
 
   const squarePosition = event.target.id;
   const playerNum = match.turn % 2 === 0 ? 2 : 1;
