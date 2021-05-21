@@ -13,10 +13,10 @@ function initiateResult(result, game) {
     const drawImg3 = document.createElement('img');
     const drawImg4 = document.createElement('img');
 
-    drawImg1.setAttribute('src', 'assets/draw.png');
-    drawImg2.setAttribute('src', 'assets/draw2.jpg');
-    drawImg3.setAttribute('src', 'assets/draw2.jpg');
-    drawImg4.setAttribute('src', 'assets/draw.png');
+    drawImg1.setAttribute('src', 'assets/images/draw.png');
+    drawImg2.setAttribute('src', 'assets/images/draw2.jpg');
+    drawImg3.setAttribute('src', 'assets/images/draw2.jpg');
+    drawImg4.setAttribute('src', 'assets/images/draw.png');
 
     drawImgContainer.appendChild(drawImg1);
     drawImgContainer.appendChild(drawImg2);

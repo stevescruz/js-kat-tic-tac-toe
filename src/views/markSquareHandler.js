@@ -17,12 +17,12 @@ function markSquareHandler(event) {
 
   if (match.turn % 2 === 0) {
     const x = document.createElement('img');
-    x.setAttribute('src', 'assets/x.svg');
+    x.setAttribute('src', 'assets/images/x.svg');
     event.target.appendChild(x);
   }
   else {
     const o = document.createElement('img');
-    o.setAttribute('src', 'assets/circle.svg');
+    o.setAttribute('src', 'assets/images/circle.svg');
     event.target.appendChild(o);
   }
 
