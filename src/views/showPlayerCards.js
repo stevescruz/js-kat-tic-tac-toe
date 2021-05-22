@@ -24,6 +24,7 @@ function showPlayerCards(player1, player2) {
   for (let i = 0; i < playerCards.length; i++) {
     const playerAvatarImg = document.createElement('img');
     playerAvatarImg.setAttribute('src', players[i].avatar);
+    playerAvatarImg.setAttribute('draggable', false);
 
     const playerNameStrong = document.createTextNode(players[i].name);
 

@@ -1,90 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kat Tic-Tac-Toe</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kat Tic-Tac-Toe</title>
 
-  <link rel="icon" href="assets/images/favicon.png">
-  <script src="src/app.js"  type="module" defer></script>
+    <link rel="icon" href="assets/images/favicon.png" />
+    <script src="src/app.js" type="module" defer></script>
 
-  <link href="global/reset.css" rel="stylesheet" />
-  <link href="global/colors.css" rel="stylesheet"/>
+    <link href="global/reset.css" rel="stylesheet" />
+    <link href="global/colors.css" rel="stylesheet" />
 
-  <link href="components/Wrapper.css" rel="stylesheet"/>
-  
-  <link href="components/CardContainer.css" rel="stylesheet"/>
-  <link href="components/PlayerCard.css" rel="stylesheet"/>
+    <link href="components/Wrapper.css" rel="stylesheet" />
 
-  <link href="components/MainContainer.css" rel="stylesheet"/>
-  <link href="components/Board.css" rel="stylesheet"/>
-  <link href="components/Square.css" rel="stylesheet"/>
+    <link href="components/CardContainer.css" rel="stylesheet" />
+    <link href="components/PlayerCard.css" rel="stylesheet" />
 
-  <link href="components/Play.css" rel="stylesheet"/>
-  <link href="components/Result.css" rel="stylesheet"/>
-  <link href="components/Draw.css" rel="stylesheet"/>
+    <link href="components/MainContainer.css" rel="stylesheet" />
+    <link href="components/Board.css" rel="stylesheet" />
+    <link href="components/Square.css" rel="stylesheet" />
 
-  <link href="components/PlayButton.css" rel="stylesheet"/>
-  <link href="components/Turn.css" rel="stylesheet"/>
-  <link href="components/Move.css" rel="stylesheet"/>
-  <link href="components/Score.css" rel="stylesheet"/>
+    <link href="components/Play.css" rel="stylesheet" />
+    <link href="components/Result.css" rel="stylesheet" />
+    <link href="components/Draw.css" rel="stylesheet" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link href="components/PlayButton.css" rel="stylesheet" />
+    <link href="components/Turn.css" rel="stylesheet" />
+    <link href="components/Move.css" rel="stylesheet" />
+    <link href="components/Score.css" rel="stylesheet" />
 
-</head>
-<body>
-  <div class="Wrapper">
-    <section class ="CardContainer">
-      <div class="PlayerCard">
-        <div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="Wrapper">
+      <section class="CardContainer">
+        <div class="PlayerCard">
+          <div></div>
+          <strong></strong>
+          <img src="assets/images/circle.svg" draggable="false" />
         </div>
-        <strong></strong>
-        <img src="assets/images/circle.svg" />
+
+        <div class="PlayerCard">
+          <div></div>
+          <strong></strong>
+          <img class="x" src="./assets/images/x.svg" draggable="false" />
+        </div>
+      </section>
+      <div class="MainContainer">
+        <section class="Play PlayButton">
+          <div>
+            <img src="assets/images/Avatar_Cat-512.png" draggable="false" />
+            <img src="assets/images/Avatar_Dog-512.png" draggable="false" />
+            <img src="assets/images/Avatar_Panda-512.png" draggable="false" />
+            <img src="assets/images/Avatar_Rabbit-512.png" draggable="false" />
+          </div>
+          <button class="">
+            <img
+              class=""
+              src="assets/images/icons8-circled-play-60.png"
+              draggable="false"
+            />
+          </button>
+        </section>
+
+        <section class="Board none">
+          <button class="none"></button>
+          <button class="none"></button>
+          <button class="none"></button>
+          <button class="none"></button>
+          <button class="none"></button>
+          <button class="none"></button>
+          <button class="none"></button>
+          <button class="none"></button>
+          <button class="none"></button>
+        </section>
+
+        <section class="none">
+          <div class="none">
+            <img
+              class="none"
+              src="assets/images/victory.gif"
+              draggable="false"
+            />
+          </div>
+
+          <button class="none">
+            <img
+              class="none"
+              src="assets/images/icons8-circled-play-60.png"
+              draggable="false"
+            />
+          </button>
+        </section>
       </div>
-
-      <div class="PlayerCard">
-        <div>
-        </div>
-        <strong></strong>
-        <img class="x" src="./assets/images/x.svg" />
-      </div>
-    </section>
-    <div class ="MainContainer">
-
-      <section class="Play PlayButton">
-        <div>
-          <img src="assets/images/Avatar_Cat-512.png" />
-          <img src="assets/images/Avatar_Dog-512.png" />
-          <img src="assets/images/Avatar_Panda-512.png" />
-          <img src="assets/images/Avatar_Rabbit-512.png" />
-        </div>
-        <button class ="">
-          <img class ="" src="assets/images/icons8-circled-play-60.png"/>
-        </button>
-      </section>
-
-      <section class="Board none">
-        <button class="none"></button>
-        <button class="none"></button>
-        <button class="none"></button>
-        <button class="none"></button>
-        <button class="none"></button>
-        <button class="none"></button>
-        <button class="none"></button>
-        <button class="none"></button>
-        <button class="none"></button>
-      </section>
-
-      <section class ="none">
-        <div class ="none">
-          <img class ="none" src="assets/images/victory.gif" />
-        </div>
-
-        <button class ="none">
-          <img class ="none" src="assets/images/icons8-circled-play-60.png"/>
-        </button>
-      </section>
     </div>
-  </div>
-</body>
+  </body>
 </html>

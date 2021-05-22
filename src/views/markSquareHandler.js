@@ -18,11 +18,13 @@ function markSquareHandler(event) {
   if (match.turn % 2 === 0) {
     const x = document.createElement('img');
     x.setAttribute('src', 'assets/images/x.svg');
+    x.setAttribute('draggable', false);
     event.target.appendChild(x);
   }
   else {
     const o = document.createElement('img');
     o.setAttribute('src', 'assets/images/circle.svg');
+    o.setAttribute('draggable', false);
     event.target.appendChild(o);
   }
   event.target.disabled = true;

@@ -21,6 +21,7 @@ function nextTurn(game) {
 
       const square = document.querySelector(`button#\\3${move}`)
       const x = document.createElement('img');
+      x.setAttribute('draggable', false);
 
       x.setAttribute('src', 'assets/images/x.svg');
       square.appendChild(x);

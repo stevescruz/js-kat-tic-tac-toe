@@ -15,9 +15,13 @@ function showResult(result, game) {
     const drawImg4 = document.createElement('img');
 
     drawImg1.setAttribute('src', 'assets/images/draw.png');
+    drawImg1.setAttribute('draggable', false);
     drawImg2.setAttribute('src', 'assets/images/draw2.jpg');
+    drawImg2.setAttribute('draggable', false);
     drawImg3.setAttribute('src', 'assets/images/draw2.jpg');
+    drawImg3.setAttribute('draggable', false);
     drawImg4.setAttribute('src', 'assets/images/draw.png');
+    drawImg4.setAttribute('draggable', false);
 
     drawImgContainer.appendChild(drawImg1);
     drawImgContainer.appendChild(drawImg2);

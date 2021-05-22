@@ -22,6 +22,10 @@ button {
   cursor: pointer;
 }
 
+h1, p, strong, img {
+  user-select: none;
+}
+
 .none {
   display: none;
 }
