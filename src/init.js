@@ -2,8 +2,8 @@ import { Player } from './models/Player.js';
 import { Score } from './models/Score.js';
 import { Game } from './models/Game.js';
 
-import { initializePlayers } from './views/initiatePlayers.js';
-import { initializePlayButton } from './views/initializePlayButton.js';
+import { showPlayerCards } from './views/showPlayerCards.js';
+import { addEventHidePlayButtonHandler } from './views/addEventHidePlayButtonHandler.js';
 
 function init() {
   const player1 = new Player();
@@ -13,8 +13,8 @@ function init() {
 
   const game = new Game(player1, player2, score);
 
-  initializePlayers(player1, player2);
-  initializePlayButton(game);
+  showPlayerCards(player1, player2);
+  addEventHidePlayButtonHandler(game);
 }
 
 export { init };

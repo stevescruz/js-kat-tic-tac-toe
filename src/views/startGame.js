@@ -5,7 +5,6 @@ import { nextTurn } from './nextTurn.js';
 
 function startGame(game) {
   game.setMatch(new Match(game.player1.id, game.player2.id));
-  console.log(game.match);
 
   const board = document.querySelector('section.Board');
   const squares = document.querySelectorAll('section.Board > button.none');
@@ -21,8 +20,6 @@ function startGame(game) {
   }
 
   nextTurn(game);
-
-  console.log(squares);
 }
 
 export { startGame };

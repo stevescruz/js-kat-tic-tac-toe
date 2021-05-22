@@ -1,10 +1,9 @@
-import { makeRemoveResultHandler } from './removeResultHandler.js';
+import { makeHideResultHandler } from './hideResultHandler.js';
 
 import { SOUND_EFFECTS_ENUM } from '../shared/enums/soundEffectsEnum.js';
 
-function initiateResult(result, game) {
+function showResult(result, game) {
   const resultScreen = document.querySelector('div.MainContainer > section:last-of-type');
-  console.log(resultScreen);
 
   if (result === 0) {
     resultScreen.setAttribute('class', 'Draw PlayButton')
@@ -58,9 +57,9 @@ function initiateResult(result, game) {
   playButton.setAttribute('class', '');
   playIconImg.setAttribute('class', '');
 
-  const removeResultHandler = makeRemoveResultHandler(game);
+  const hideResultHandler = makeHideResultHandler(game);
 
-  playButton.addEventListener('click', removeResultHandler);
+  playButton.addEventListener('click', hideResultHandler);
 }
 
-export { initiateResult };
+export { showResult };

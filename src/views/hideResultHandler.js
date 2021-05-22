@@ -2,12 +2,12 @@ import { startGame } from './startGame.js';
 
 let currentGame;
 
-const makeRemoveResultHandler = function (game) {
+const makeHideResultHandler = function (game) {
   currentGame = game;
-  return removeResultHandler;
+  return hideResultHandler;
 }
 
-function removeResultHandler(event) {
+function hideResultHandler(event) {
   const game = currentGame;
 
   const resultScreen = document.querySelector('div.MainContainer > section:last-of-type');
@@ -31,4 +31,4 @@ function removeResultHandler(event) {
 }
 
 
-export { makeRemoveResultHandler };
+export { makeHideResultHandler };

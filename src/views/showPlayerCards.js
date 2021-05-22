@@ -1,4 +1,4 @@
-function initializePlayers(player1, player2) {
+function showPlayerCards(player1, player2) {
   const playerCard1 = document.querySelector('div.PlayerCard');
   const playerCard1Div = document.querySelector('div.PlayerCard > div');
   const playerCard1Strong = document.querySelector('div.PlayerCard > strong');
@@ -32,4 +32,4 @@ function initializePlayers(player1, player2) {
   }
 }
 
-export { initializePlayers };
+export { showPlayerCards };

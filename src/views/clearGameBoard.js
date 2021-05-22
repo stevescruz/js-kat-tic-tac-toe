@@ -1,6 +1,6 @@
 import { makeMarkSquareHandler } from './markSquareHandler.js';
 
-function clearBoard(game) {
+function clearGameBoard(game) {
   const board = document.querySelector('section.Board');
   const squares = document.querySelectorAll('section.Board > button.Square');
   const playerCard1 = document.querySelector('div.PlayerCard');
@@ -24,4 +24,4 @@ function clearBoard(game) {
   }
 }
 
-export { clearBoard };
+export { clearGameBoard };

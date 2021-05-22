@@ -1,5 +1,5 @@
-import { clearBoard } from './clearBoard.js';
-import { initiateResult } from './initiateResult.js';
+import { clearGameBoard } from './clearGameBoard.js';
+import { showResult } from './showResult.js';
 
 function nextTurn(game) {
   const { match } = game;
@@ -25,21 +25,13 @@ function nextTurn(game) {
       x.setAttribute('src', 'assets/images/x.svg');
       square.appendChild(x);
       square.disabled = true
-
       match.updateBoard(move.toString(), 2);
 
-      console.log('move:', move);
-      console.log(('board:', match.movesByPlayers[0] | match.movesByPlayers[1]).toString(2));
-
       match.setResult();
-
-      console.log('result:', match.result);
-
       if (match.result !== -1) {
-        console.log('player #2 ended the game');
         setTimeout(() => {
-          clearBoard(game);
-          initiateResult(match.result, game);
+          clearGameBoard(game);
+          showResult(match.result, game);
         }, 250);
         return;
       }

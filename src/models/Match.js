@@ -29,9 +29,6 @@ class Match {
   }
 
   updateBoard(position, playerNum) {
-    console.log("player:", playerNum);
-    console.log("position:", position);
-
     const move = 1 << position - 1;
 
     if (!this.isMoveValid(move)) {
@@ -41,10 +38,7 @@ class Match {
     const storedMoves = this.movesByPlayers[playerNum - 1];
     this.movesByPlayers[playerNum - 1] = storedMoves | move;
 
-    console.log(`Player #${playerNum} - current move:`, move.toString(2));
-    console.log(`Player #${playerNum} - all moves:`, (this.movesByPlayers[playerNum - 1]).toString(2));
-
-    return true;
+    return;
   }
 
   isMoveValid(move) {
@@ -55,11 +49,8 @@ class Match {
     const possibleMoves = [];
 
     const completedMoves = this.movesByPlayers[0] | this.movesByPlayers[1];
-    console.log('completed moves:', completedMoves.toString(2));
-
     for (let bit = 0; bit < 9; bit += 1) {
       const move = (completedMoves >> bit) & 0B1;
-
       if (move !== 0B1) {
         const position = bit + 1;
         possibleMoves.push(position);
@@ -73,14 +64,12 @@ class Match {
     const markedSquares = this.movesByPlayers[0] | this.movesByPlayers[1];
 
     const player1FoundMatch = WINNING_MOVES_ENUM.some(combination => (combination & this.movesByPlayers[0]) === combination);
-
     if (player1FoundMatch) {
       this.result = 1;
       return;
     }
 
     const player2FoundMatch = WINNING_MOVES_ENUM.some(combination => (combination & this.movesByPlayers[1]) === combination);
-
     if (player2FoundMatch) {
       this.result = 2;
       return;
@@ -91,21 +80,16 @@ class Match {
       return;
     }
 
-    console.log('Gamestate - marked squares:', markedSquares.toString(2));
     this.result = -1;
     return;
   }
 
   pickAINextMove() {
     const possibleMoves = this.checkPossibleMoves();
-  
-    console.log("possible moves:", possibleMoves);
-  
+
     const randomNumber = generateRandomNumber(0, possibleMoves.length - 1);
     const boardPosition = possibleMoves[randomNumber];
-  
-    console.log('random board position:', boardPosition);
-  
+
     return boardPosition;
   }
 }
